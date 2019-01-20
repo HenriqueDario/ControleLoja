@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Loja.Model
 {
-    public class Produto
+    public class Product
     {
         public string Nome { get; set; }
         public int Quantidade { get; set; }

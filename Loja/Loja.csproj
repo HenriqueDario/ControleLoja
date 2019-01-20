@@ -47,41 +47,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ConectarBanco.cs" />
-    <Compile Include="Controller\FuncionarioController.cs" />
+    <Compile Include="Controller\EmployeeController.cs" />
     <Compile Include="Controller\ValidarCPF.cs" />
-    <Compile Include="Model\Funcionario.cs" />
-    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FormAddFuncionario.cs">
+    <Compile Include="View\FormAddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormAddFuncionario.Designer.cs">
-      <DependentUpon>FormAddFuncionario.cs</DependentUpon>
+    <Compile Include="View\FormAddEmployee.Designer.cs">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormAddProduto.cs">
+    <Compile Include="View\FormAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormAddProduto.Designer.cs">
-      <DependentUpon>FormAddProduto.cs</DependentUpon>
+    <Compile Include="View\FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormEditFuncionario.cs">
+    <Compile Include="View\FormEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormEditFuncionario.Designer.cs">
-      <DependentUpon>FormEditFuncionario.cs</DependentUpon>
+    <Compile Include="View\FormEditEmployee.Designer.cs">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormEstoque.cs">
+    <Compile Include="View\FormStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormEstoque.Designer.cs">
-      <DependentUpon>FormEstoque.cs</DependentUpon>
+    <Compile Include="View\FormStock.Designer.cs">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormListarFuncionarios.cs">
+    <Compile Include="View\FormListEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormListarFuncionarios.Designer.cs">
-      <DependentUpon>FormListarFuncionarios.cs</DependentUpon>
+    <Compile Include="View\FormListEmployees.Designer.cs">
+      <DependentUpon>FormListEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormLogin.cs">
       <SubType>Form</SubType>
@@ -89,11 +89,11 @@
     <Compile Include="View\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormPrincipal.cs">
+    <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormPrincipal.Designer.cs">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <Compile Include="View\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,26 +105,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\FormAddFuncionario.resx">
-      <DependentUpon>FormAddFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAddEmployee.resx">
+      <DependentUpon>FormAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormAddProduto.resx">
-      <DependentUpon>FormAddProduto.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormEditFuncionario.resx">
-      <DependentUpon>FormEditFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormEditEmployee.resx">
+      <DependentUpon>FormEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormEstoque.resx">
-      <DependentUpon>FormEstoque.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormStock.resx">
+      <DependentUpon>FormStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormListarFuncionarios.resx">
-      <DependentUpon>FormListarFuncionarios.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormListEmployees.resx">
+      <DependentUpon>FormListEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormPrincipal.resx">
-      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

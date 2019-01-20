@@ -12,11 +12,11 @@ using Loja.Model;
 
 namespace Loja.View
 {
-    public partial class FormEditFuncionario : Form
+    public partial class FormEditEmployee : Form
     {
-        Funcionario funcionario = new Funcionario();
+        Employee funcionario = new Employee();
         Controller.ValidarCPF vc = new Controller.ValidarCPF();
-        public FormEditFuncionario(Funcionario f)
+        public FormEditEmployee(Employee f)
         {
             InitializeComponent();
             funcionario = f;
@@ -71,7 +71,7 @@ namespace Loja.View
                     funcionario.Bairro = TxtBairro.Text;
                     funcionario.Telefone = MtxtTelefone.Text;
 
-                    Controller.FuncionarioController fc = new Controller.FuncionarioController();
+                    Controller.EmployeeController fc = new Controller.EmployeeController();
                     fc.EditarFuncionario(funcionario);
 
                     MessageBox.Show("Funcionou corretamente", "Êxito");

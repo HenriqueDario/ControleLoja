@@ -94,7 +94,7 @@ namespace Loja.View
 
         private void PbFuncionario_Click(object sender, EventArgs e)
         {
-            FormListarFuncionarios FormListar = new View.FormListarFuncionarios();
+            FormListEmployees FormListar = new View.FormListEmployees();
             this.Hide();
             TimerMenu.Start();
             menuFlag = !menuFlag;
@@ -104,7 +104,7 @@ namespace Loja.View
 
         private void LblFuncionario_Click(object sender, EventArgs e)
         {
-            FormListarFuncionarios FormListar = new FormListarFuncionarios();
+            FormListEmployees FormListar = new FormListEmployees();
             this.Hide();
             TimerMenu.Start();
             menuFlag = !menuFlag;
@@ -119,7 +119,7 @@ namespace Loja.View
 
         private void PbEstoque_Click(object sender, EventArgs e)
         {
-            FormEstoque FormEstoque = new FormEstoque();
+            FormStock FormEstoque = new FormStock();
             this.Hide();
             TimerMenu.Start();
             menuFlag = !menuFlag;

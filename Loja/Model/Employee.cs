@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Loja.Model
 {
-    public class Funcionario
+    public class Employee
     {
         public int IdFuncionario { get; set; }       
 

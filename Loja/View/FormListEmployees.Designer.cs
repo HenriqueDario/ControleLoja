@@ -1,6 +1,6 @@
 ﻿namespace Loja.View
 {
-    partial class FormListarFuncionarios
+    partial class FormListEmployees
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListarFuncionarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListEmployees));
             this.PbExit = new System.Windows.Forms.PictureBox();
             this.DgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.LblTitulo = new System.Windows.Forms.Label();

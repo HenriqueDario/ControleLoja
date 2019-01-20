@@ -13,11 +13,11 @@ using Loja.Model;
 
 namespace Loja.Controller
 {
-    public class FuncionarioController
+    public class EmployeeController
     {
 
         //Método de cadastro do funcionario, passando um funcionário como parametro
-        public void CadastrarFuncionario(Funcionario funcionario)
+        public void CadastrarFuncionario(Employee funcionario)
         {
             //limpando conexão
             SqlConnection conexao = null;
@@ -66,7 +66,7 @@ namespace Loja.Controller
 
 
         //Método para listar os funcionarios, trazendo todos os funcionarios do banco de dados em um lista de funcionarios
-        public List<Funcionario> ListarFuncionarios()
+        public List<Employee> ListarFuncionarios()
         {
             //limpando conexão       
             SqlConnection conexao = null;
@@ -86,13 +86,13 @@ namespace Loja.Controller
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 //instanciação de lista de funcionarios
-                List<Funcionario> listaFuncionario = new List<Funcionario>();
+                List<Employee> listaFuncionario = new List<Employee>();
 
 
                 //Enquanto houver registros adicionará funcionarios a lista
                 while (dr.Read())
                 {
-                    Funcionario funcionario = new Funcionario
+                    Employee funcionario = new Employee
                     {
                         IdFuncionario = Convert.ToInt16(dr["idFuncionario"]),
                         Nome = dr["Nome"].ToString(),
@@ -124,7 +124,7 @@ namespace Loja.Controller
         }
 
         //Método para editar um funcionário, passando um funcionário como parametro
-        public void EditarFuncionario(Funcionario funcionario)
+        public void EditarFuncionario(Employee funcionario)
         {
             //limpando a conexão
             SqlConnection conexao = null;
@@ -254,7 +254,7 @@ namespace Loja.Controller
         }
 
         //Método para buscar funcionario a partir de seu ID
-        public Funcionario BuscaFuncionario(int idFuncionario)
+        public Employee BuscaFuncionario(int idFuncionario)
         {
             //limpar conexão
             SqlConnection conexao = null;
@@ -278,7 +278,7 @@ namespace Loja.Controller
                 //se ler/encontrar o funcionário
                 if (dr.Read())
                 {
-                    Funcionario funcionario = new Funcionario
+                    Employee funcionario = new Employee
                     {
                         IdFuncionario = Convert.ToInt16(dr["idFuncionario"]),
                         Nome = dr["Nome"].ToString(),

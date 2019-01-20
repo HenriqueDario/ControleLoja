@@ -1,6 +1,6 @@
 ﻿namespace Loja.View
 {
-    partial class FormEditFuncionario
+    partial class FormEditEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditFuncionario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditEmployee));
             this.BtnLimpar = new System.Windows.Forms.Button();
             this.MtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.BtnEditar = new System.Windows.Forms.Button();

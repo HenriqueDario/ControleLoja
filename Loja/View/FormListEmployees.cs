@@ -13,10 +13,10 @@ using Loja.Model;
 
 namespace Loja.View
 {
-    public partial class FormListarFuncionarios : Form
+    public partial class FormListEmployees : Form
     {
         int idFuncionario = -1;
-        public FormListarFuncionarios()
+        public FormListEmployees()
         {
             InitializeComponent();
         }
@@ -53,7 +53,7 @@ namespace Loja.View
                 dr = MessageBox.Show("Você Deseja Excluir esse funcionário?", "Confirmação", MessageBoxButtons.YesNo);
                 if (dr.Equals(DialogResult.Yes))
                 {
-                    Controller.FuncionarioController fc = new Controller.FuncionarioController();
+                    Controller.EmployeeController fc = new Controller.EmployeeController();
                     if (fc.ExcluirFuncionario(idFuncionario))
                         MessageBox.Show("Excluido com sucesso", "Exito");
                     ListarDataGrid();
@@ -67,7 +67,7 @@ namespace Loja.View
 
         public void ListarDataGrid()
         {
-            Controller.FuncionarioController fc = new Controller.FuncionarioController();
+            Controller.EmployeeController fc = new Controller.EmployeeController();
             DgvFuncionarios.DataSource = fc.ListarFuncionarios();
         }
 
@@ -83,10 +83,10 @@ namespace Loja.View
 
                     idFuncionario = Convert.ToInt16(DgvFuncionarios.CurrentRow.Cells[0].Value.ToString());
 
-                    Controller.FuncionarioController fc = new Controller.FuncionarioController();
-                    Funcionario f = fc.BuscaFuncionario(idFuncionario);
+                    Controller.EmployeeController fc = new Controller.EmployeeController();
+                    Employee f = fc.BuscaFuncionario(idFuncionario);
 
-                    FormEditFuncionario FormEdit = new FormEditFuncionario(f);
+                    FormEditEmployee FormEdit = new FormEditEmployee(f);
                     TxtPesquisa.Text = "Digite o nome do Funcionário";
                     this.Hide();
                     FormEdit.ShowDialog();
@@ -122,7 +122,7 @@ namespace Loja.View
         {
             if (TxtPesquisa.Text != "Digite o nome do Funcionário")
             {
-                Controller.FuncionarioController fc = new Controller.FuncionarioController();
+                Controller.EmployeeController fc = new Controller.EmployeeController();
                 if (TxtPesquisa.Text.Trim().Length == 0)
                 {
                     ListarDataGrid();

@@ -32,7 +32,7 @@ namespace Loja
                 if (ValidarCampos() && vc.ValidaCPF(MtxtCPF.Text))
                 {
                     //instancia um novo funcionário
-                    Funcionario funcionario = new Funcionario
+                    Employee funcionario = new Employee
                     {
                         Nome = TxtNome.Text,
                         DataNascimento = Convert.ToDateTime(DtpDataNascimento.Text),
@@ -44,7 +44,7 @@ namespace Loja
                         Telefone = MtxtTelefone.Text
                     };
                     //instanciação de um Funcionário Controller
-                    Controller.FuncionarioController fc = new Controller.FuncionarioController();
+                    Controller.EmployeeController fc = new Controller.EmployeeController();
 
                     //Usa o método de cadastrar funcionário passando um funcionário
                     fc.CadastrarFuncionario(funcionario);
