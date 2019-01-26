@@ -181,7 +181,7 @@
             // 
             // PbMenu
             // 
-            this.PbMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.PbMenu.BackColor = System.Drawing.Color.Transparent;
             this.PbMenu.Image = global::Loja.Properties.Resources.IconMenu;
             this.PbMenu.Location = new System.Drawing.Point(2, 2);
             this.PbMenu.Name = "PbMenu";

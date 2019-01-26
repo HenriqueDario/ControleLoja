@@ -158,7 +158,7 @@
             this.PnBlue.Size = new System.Drawing.Size(0, 3);
             this.PnBlue.TabIndex = 7;
             // 
-            // FormListarFuncionarios
+            // FormListEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,10 +174,10 @@
             this.Controls.Add(this.PbExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormListarFuncionarios";
+            this.Name = "FormListEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
-            this.Load += new System.EventHandler(this.FormListarFuncionarios_Load);
+            this.Load += new System.EventHandler(this.FormListEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvFuncionarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbSearch)).EndInit();

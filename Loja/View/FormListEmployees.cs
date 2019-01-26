@@ -21,9 +21,7 @@ namespace Loja.View
             InitializeComponent();
         }
 
-
-
-        private void FormListarFuncionarios_Load(object sender, EventArgs e)
+        private void FormListEmployees_Load(object sender, EventArgs e)
         {
             DgvFuncionarios.DefaultCellStyle.SelectionBackColor = Color.DeepSkyBlue;
             ListarDataGrid();
@@ -41,7 +39,7 @@ namespace Loja.View
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 if (DgvFuncionarios.CurrentRow.Index > -1)
@@ -65,17 +63,12 @@ namespace Loja.View
             }
         }
 
-        public void ListarDataGrid()
-        {
-            Controller.EmployeeController fc = new Controller.EmployeeController();
-            DgvFuncionarios.DataSource = fc.ListarFuncionarios();
-        }
 
 
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 if (DgvFuncionarios.CurrentRow.Index > -1)
@@ -103,20 +96,7 @@ namespace Loja.View
 
 
 
-        private void TxtPesquisa_Enter(object sender, EventArgs e)
-        {
-            if (TxtPesquisa.Text == "Digite o nome do Funcionário")
-                TxtPesquisa.Text = String.Empty;
 
-        }
-
-
-        private void TxtPesquisa_Leave(object sender, EventArgs e)
-        {
-            if (TxtPesquisa.Text.Trim() == String.Empty)
-                TxtPesquisa.Text = "Digite o nome do Funcionário";
-
-        }
 
         private void TxtPesquisa_TextChanged(object sender, EventArgs e)
         {
@@ -139,6 +119,26 @@ namespace Loja.View
         private void PbExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TxtPesquisa_Enter(object sender, EventArgs e)
+        {
+            if (TxtPesquisa.Text == "Digite o nome do Funcionário")
+                TxtPesquisa.Text = String.Empty;
+        }
+
+
+        private void TxtPesquisa_Leave(object sender, EventArgs e)
+        {
+            if (TxtPesquisa.Text.Trim() == String.Empty)
+                TxtPesquisa.Text = "Digite o nome do Funcionário";
+
+        }
+
+        public void ListarDataGrid()
+        {
+            Controller.EmployeeController fc = new Controller.EmployeeController();
+            DgvFuncionarios.DataSource = fc.ListarFuncionarios();
         }
     }
 }

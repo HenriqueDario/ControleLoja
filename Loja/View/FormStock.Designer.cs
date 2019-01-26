@@ -60,7 +60,7 @@
             // 
             this.LblTitulo.AutoSize = true;
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTitulo.Location = new System.Drawing.Point(243, 9);
+            this.LblTitulo.Location = new System.Drawing.Point(256, 9);
             this.LblTitulo.Name = "LblTitulo";
             this.LblTitulo.Size = new System.Drawing.Size(83, 22);
             this.LblTitulo.TabIndex = 1;
@@ -135,10 +135,12 @@
             this.TxtPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPesquisa.Font = new System.Drawing.Font("Century Gothic", 9.5F, System.Drawing.FontStyle.Bold);
             this.TxtPesquisa.ForeColor = System.Drawing.Color.Silver;
-            this.TxtPesquisa.Location = new System.Drawing.Point(332, 181);
+            this.TxtPesquisa.Location = new System.Drawing.Point(332, 179);
             this.TxtPesquisa.Name = "TxtPesquisa";
             this.TxtPesquisa.Size = new System.Drawing.Size(200, 16);
             this.TxtPesquisa.TabIndex = 12;
+            this.TxtPesquisa.Enter += new System.EventHandler(this.TxtPesquisa_Enter);
+            this.TxtPesquisa.Leave += new System.EventHandler(this.TxtPesquisa_Leave);
             // 
             // PbSearch
             // 
@@ -150,7 +152,7 @@
             this.PbSearch.TabIndex = 11;
             this.PbSearch.TabStop = false;
             // 
-            // FormEstoque
+            // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +168,7 @@
             this.Controls.Add(this.PbExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormEstoque";
+            this.Name = "FormStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
             this.Load += new System.EventHandler(this.FormEstoque_Load);

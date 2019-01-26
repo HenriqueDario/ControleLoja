@@ -25,16 +25,21 @@ namespace Loja.View
         }
 
         //Colocar o texto do preço como valor monetário
-        private void TxtPreco_TextChanged(object sender, EventArgs e)
+        private void TxtPreco_Leave(object sender, EventArgs e)
         {
             try
             {
-                TxtPreco.Text = Convert.ToString(Convert.ToDouble(TxtPreco.Text).ToString("N2"));
+                TxtPreco.Text = Decimal.Parse(TxtPreco.Text).ToString("C2");
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        private void FormAddProduct_Load(object sender, EventArgs e)
+        {
+            DtpValidade.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

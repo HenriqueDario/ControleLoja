@@ -10,7 +10,7 @@ namespace Loja.Model
     {
         public string Nome { get; set; }
         public int Quantidade { get; set; }
-        public double Preco { get; set; }
+        public decimal Preco { get; set; }
         public string Lote { get; set; }
         public DateTime Validade { get; set; }
     }

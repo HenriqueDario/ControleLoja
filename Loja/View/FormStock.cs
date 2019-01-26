@@ -25,7 +25,8 @@ namespace Loja.View
 
         private void FormEstoque_Load(object sender, EventArgs e)
         {
-
+            DgvProdutos.DefaultCellStyle.SelectionBackColor = Color.DeepSkyBlue;
+            TxtPesquisa.Text = "Digite o nome do produto";
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -34,6 +35,18 @@ namespace Loja.View
             this.Hide();
             FormAddProd.ShowDialog();
             this.Show();
+        }
+
+        private void TxtPesquisa_Enter(object sender, EventArgs e)
+        {
+            if (TxtPesquisa.Text == "Digite o nome do produto")
+                TxtPesquisa.Text = String.Empty;
+        }
+
+        private void TxtPesquisa_Leave(object sender, EventArgs e)
+        {
+            if (TxtPesquisa.Text.Trim() == String.Empty)
+                TxtPesquisa.Text = "Digite o nome do produto";
         }
     }
 }
