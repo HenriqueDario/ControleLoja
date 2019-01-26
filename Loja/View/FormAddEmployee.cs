@@ -94,9 +94,9 @@ namespace Loja
         private Boolean ValidarCampos()
         {
             //se tudo estiver correto retorna True
-            if (TxtNome.Text.Trim() != String.Empty && DtpDataNascimento.Text.Trim() != String.Empty
-                && MtxtRG.MaskCompleted && MtxtCPF.MaskCompleted && TxtCargo.Text.Trim() != String.Empty
-                && TxtEndereco.Text.Trim() != String.Empty && TxtBairro.Text.Trim() != String.Empty && MtxtTelefone.MaskCompleted)
+            if (!string.IsNullOrWhiteSpace(TxtNome.Text) && !string.IsNullOrWhiteSpace(TxtBairro.Text)
+                && !string.IsNullOrWhiteSpace(TxtEndereco.Text) && !string.IsNullOrWhiteSpace(TxtCargo.Text)
+                && MtxtRG.MaskCompleted && MtxtCPF.MaskCompleted && MtxtTelefone.MaskCompleted)
                 return true;
 
 

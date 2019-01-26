@@ -104,11 +104,11 @@
             // 
             this.LblPreco.AutoSize = true;
             this.LblPreco.Font = new System.Drawing.Font("Arial Black", 9F);
-            this.LblPreco.Location = new System.Drawing.Point(290, 100);
+            this.LblPreco.Location = new System.Drawing.Point(273, 100);
             this.LblPreco.Name = "LblPreco";
-            this.LblPreco.Size = new System.Drawing.Size(50, 17);
+            this.LblPreco.Size = new System.Drawing.Size(71, 17);
             this.LblPreco.TabIndex = 6;
-            this.LblPreco.Text = "Preço:";
+            this.LblPreco.Text = "Preço: R$";
             // 
             // TxtNome
             // 
@@ -128,6 +128,7 @@
             this.BtnCadastrar.TabIndex = 12;
             this.BtnCadastrar.Text = "Cadastrar";
             this.BtnCadastrar.UseVisualStyleBackColor = false;
+            this.BtnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // BtnLimpar
             // 

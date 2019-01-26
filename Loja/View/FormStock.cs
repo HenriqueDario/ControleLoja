@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Loja.Controller;
+using Loja.Model;
 
 namespace Loja.View
 {
@@ -26,7 +28,10 @@ namespace Loja.View
         private void FormEstoque_Load(object sender, EventArgs e)
         {
             DgvProdutos.DefaultCellStyle.SelectionBackColor = Color.DeepSkyBlue;
+            ListarDataGrid();
             TxtPesquisa.Text = "Digite o nome do produto";
+
+
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
@@ -47,6 +52,12 @@ namespace Loja.View
         {
             if (TxtPesquisa.Text.Trim() == String.Empty)
                 TxtPesquisa.Text = "Digite o nome do produto";
+        }
+
+        public void ListarDataGrid()
+        {
+            ProductController pc = new ProductController();
+            DgvProdutos.DataSource = pc.ListarProdutos();
         }
     }
 }

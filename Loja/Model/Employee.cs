@@ -25,5 +25,22 @@ namespace Loja.Model
         public string Bairro { get; set; }
 
         public string Telefone { get; set; }
+
+        public Employee()
+        {
+
+        }
+
+        public Employee(string nome, string rg, string cpf, DateTime dataNascimento, string cargo, string endereco, string bairro, string telefone)
+        {
+            Nome = nome;
+            Rg = rg;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            Cargo = cargo;
+            Endereco = endereco;
+            Bairro = bairro;
+            Telefone = telefone;
+        }
     }
 }
