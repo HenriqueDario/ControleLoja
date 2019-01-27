@@ -17,14 +17,13 @@ Telefone varchar(20) not null
 );
 
 create table tbLogin(
-idFuncionario int identity(1,1) PRIMARY KEY,
 Login varchar(100) not null,
 Senha varchar(100) not null
 );
 
 
 create table tbProduto(
-idProduto int identity(1,1) primary key,
+IdProduto int identity(1,1) primary key,
 Nome varchar(100) not null,
 Quantidade int not null,
 Preco money not null,
@@ -34,23 +33,17 @@ Validade date not null
 );
 
 
-drop table tbProduto
-
- insert into tbFuncionario(Nome, Rg, Cpf, Cargo, DataDeNascimento, Endereco, Bairro, Telefone)
- values
- ('Eu','393927258','50777783886','Vagabundo','04/08/2000','manuel bastos','nazaré','959292291');
-
 insert into tbLogin(Login, Senha)
 values
 ('jubileu','123')
-
 
 
  select * from tbFuncionario;
  select * from tblogin;
  select * from tbProduto;
 
-
+drop database dbLoja
+go
 
 update tbFuncionario SET Nome = 'Eu', Rg = '111' where idFuncionario = 3
 

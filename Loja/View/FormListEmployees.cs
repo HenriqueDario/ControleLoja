@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using Loja.Model;
+using Loja.Controller;
 
 namespace Loja.View
 {
@@ -51,7 +52,7 @@ namespace Loja.View
                 dr = MessageBox.Show("Você Deseja Excluir esse funcionário?", "Confirmação", MessageBoxButtons.YesNo);
                 if (dr.Equals(DialogResult.Yes))
                 {
-                    Controller.EmployeeController fc = new Controller.EmployeeController();
+                    EmployeeController fc = new EmployeeController();
                     if (fc.ExcluirFuncionario(idFuncionario))
                         MessageBox.Show("Excluido com sucesso", "Exito");
                     ListarDataGrid();
@@ -76,7 +77,7 @@ namespace Loja.View
 
                     idFuncionario = Convert.ToInt16(DgvFuncionarios.CurrentRow.Cells[0].Value.ToString());
 
-                    Controller.EmployeeController fc = new Controller.EmployeeController();
+                    EmployeeController fc = new EmployeeController();
                     Employee f = fc.BuscaFuncionario(idFuncionario);
 
                     FormEditEmployee FormEdit = new FormEditEmployee(f);
@@ -102,7 +103,7 @@ namespace Loja.View
         {
             if (TxtPesquisa.Text != "Digite o nome do Funcionário")
             {
-                Controller.EmployeeController fc = new Controller.EmployeeController();
+                EmployeeController EmployeeCont = new EmployeeController();
                 if (TxtPesquisa.Text.Trim().Length == 0)
                 {
                     ListarDataGrid();
@@ -110,7 +111,7 @@ namespace Loja.View
                 }
                 else
                 {
-                    DgvFuncionarios.DataSource = fc.BuscaFuncionario(TxtPesquisa.Text);
+                    DgvFuncionarios.DataSource = EmployeeCont.BuscaFuncionario(TxtPesquisa.Text);
                     DgvFuncionarios.Refresh();
                 }
             }
@@ -137,8 +138,8 @@ namespace Loja.View
 
         public void ListarDataGrid()
         {
-            Controller.EmployeeController fc = new Controller.EmployeeController();
-            DgvFuncionarios.DataSource = fc.ListarFuncionarios();
+            EmployeeController EmployeeCont = new EmployeeController();
+            DgvFuncionarios.DataSource = EmployeeCont.ListarFuncionarios();
         }
     }
 }

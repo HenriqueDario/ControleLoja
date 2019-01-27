@@ -97,6 +97,7 @@
             this.BtnExcluir.TabIndex = 9;
             this.BtnExcluir.Text = "Excluir Produto";
             this.BtnExcluir.UseVisualStyleBackColor = false;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCadastrar
             // 
@@ -139,6 +140,7 @@
             this.TxtPesquisa.Name = "TxtPesquisa";
             this.TxtPesquisa.Size = new System.Drawing.Size(200, 16);
             this.TxtPesquisa.TabIndex = 12;
+            this.TxtPesquisa.TextChanged += new System.EventHandler(this.TxtPesquisa_TextChanged);
             this.TxtPesquisa.Enter += new System.EventHandler(this.TxtPesquisa_Enter);
             this.TxtPesquisa.Leave += new System.EventHandler(this.TxtPesquisa_Leave);
             // 

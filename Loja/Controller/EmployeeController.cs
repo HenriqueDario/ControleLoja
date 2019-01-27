@@ -104,7 +104,7 @@ namespace Loja.Controller
                         Telefone = dr["Telefone"].ToString(),
                         DataNascimento = Convert.ToDateTime(dr["DataDeNascimento"])
                     };
-
+                    //adiciona o funcionário na lista
                     listaFuncionario.Add(funcionario);
                 }
                 //retorna a lista de funcionarios preenchida
@@ -294,8 +294,6 @@ namespace Loja.Controller
                     //retorna o funcionario
                     return funcionario;
                 }
-                //executa o comando
-                cmd.ExecuteNonQuery();
 
                 //retorna nada
                 return null;
