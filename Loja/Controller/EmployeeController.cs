@@ -92,6 +92,7 @@ namespace Loja.Controller
                 //Enquanto houver registros adicionará funcionarios a lista
                 while (dr.Read())
                 {
+                    //instancia novo funcionario com os dados vindos do banco
                     Employee funcionario = new Employee
                     {
                         IdFuncionario = Convert.ToInt16(dr["idFuncionario"]),
@@ -134,14 +135,14 @@ namespace Loja.Controller
                 conexao = ConectarBanco.GetConexao();
 
                 //criação da string com o comando SQL
-                string sql = "UPDATE tbFuncionario SET Nome = @nome, Rg = @rg, cpf = @cpf, cargo = @cargo, endereco = @endereco, bairro = @bairro, telefone = @telefone, dataDeNascimento = @dataDeNascimento WHERE idFuncionario = @idFuncionario";
+                string sql = "UPDATE tbFuncionario SET Nome = @nome, Rg = @rg, cpf = @cpf, cargo = @cargo, endereco = @endereco, bairro = @bairro, telefone = @telefone, dataDeNascimento = @dataDeNascimento WHERE IdFuncionario = @IdFuncionario";
 
 
                 //criação do comando SQL
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 //Adição dos parametros para o comando
-                cmd.Parameters.AddWithValue("@idFuncionario", funcionario.IdFuncionario);
+                cmd.Parameters.AddWithValue("@IdFuncionario", funcionario.IdFuncionario);
                 cmd.Parameters.AddWithValue("@nome", funcionario.Nome);
                 cmd.Parameters.AddWithValue("@rg", funcionario.Rg);
                 cmd.Parameters.AddWithValue("@cpf", funcionario.Cpf);
@@ -179,13 +180,13 @@ namespace Loja.Controller
                 conexao = ConectarBanco.GetConexao();
 
                 //criação do a string SQL
-                string sql = "delete from tbFuncionario WHERE idFuncionario = @idFuncionario";
+                string sql = "delete from tbFuncionario WHERE IdFuncionario = @IdFuncionario";
 
                 //criação do comando SQL
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 //adição do parametro para o comando sql
-                cmd.Parameters.AddWithValue("@idFuncionario", id);
+                cmd.Parameters.AddWithValue("@IdFuncionario", id);
 
                 //execução do comando
                 cmd.ExecuteNonQuery();
@@ -224,6 +225,7 @@ namespace Loja.Controller
 
                 //criação do comando
                 SqlCommand cmd = new SqlCommand(sql, conexao);
+
                 //adição do parametro do nome (com % para buscar o nome todo)
                 cmd.Parameters.AddWithValue("@nome", nome + "%");
 
@@ -264,13 +266,13 @@ namespace Loja.Controller
                 conexao = ConectarBanco.GetConexao();
 
                 //criar string com o SQL
-                string sql = "SELECT * FROM tbFuncionario where idFuncionario = @idFuncionario";
+                string sql = "SELECT * FROM tbFuncionario where IdFuncionario = @IdFuncionario";
 
                 //criação do comando sql
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 //adição dos parametros para o comando
-                cmd.Parameters.AddWithValue("@idFuncionario", idFuncionario);
+                cmd.Parameters.AddWithValue("@IdFuncionario", idFuncionario);
 
                 //ler os dados do comando
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -278,9 +280,10 @@ namespace Loja.Controller
                 //se ler/encontrar o funcionário
                 if (dr.Read())
                 {
+                    //instancia novo funcionário com os dados vindos do banco
                     Employee funcionario = new Employee
                     {
-                        IdFuncionario = Convert.ToInt16(dr["idFuncionario"]),
+                        IdFuncionario = Convert.ToInt16(dr["IdFuncionario"]),
                         Nome = dr["Nome"].ToString(),
                         Rg = dr["Rg"].ToString(),
                         Cpf = dr["Cpf"].ToString(),

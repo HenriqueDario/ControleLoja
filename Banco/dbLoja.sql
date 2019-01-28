@@ -5,7 +5,7 @@ use dbLoja
 go
 
 create table tbFuncionario(
-idFuncionario int identity(1,1) PRIMARY KEY,
+IdFuncionario int identity(1,1) PRIMARY KEY,
 Nome varchar(100) not null,
 Rg varchar(20) not null,
 Cpf varchar(20) not null,
@@ -23,7 +23,7 @@ Senha varchar(100) not null
 
 
 create table tbProduto(
-IdProduto int identity(1,1) primary key,
+IdProduto int identity(1,1) PRIMARY KEY,
 Nome varchar(100) not null,
 Quantidade int not null,
 Preco money not null,

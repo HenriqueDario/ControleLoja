@@ -72,6 +72,12 @@
     <Compile Include="View\FormEditEmployee.Designer.cs">
       <DependentUpon>FormEditEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEditProduct.Designer.cs">
+      <DependentUpon>FormEditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormEditEmployee.resx">
       <DependentUpon>FormEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEditProduct.resx">
+      <DependentUpon>FormEditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormStock.resx">
       <DependentUpon>FormStock.cs</DependentUpon>

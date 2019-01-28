@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddProduct));
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblTitulo = new System.Windows.Forms.Label();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.LblNome = new System.Windows.Forms.Label();
             this.LblValidade = new System.Windows.Forms.Label();
@@ -49,15 +49,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // LblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(170, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Adicionar Produto";
+            this.LblTitulo.AutoSize = true;
+            this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTitulo.Location = new System.Drawing.Point(170, 10);
+            this.LblTitulo.Name = "LblTitulo";
+            this.LblTitulo.Size = new System.Drawing.Size(177, 22);
+            this.LblTitulo.TabIndex = 0;
+            this.LblTitulo.Text = "Adicionar Produto";
             // 
             // pbExit
             // 
@@ -141,6 +141,7 @@
             this.BtnLimpar.TabIndex = 13;
             this.BtnLimpar.Text = "Limpar";
             this.BtnLimpar.UseVisualStyleBackColor = false;
+            this.BtnLimpar.Click += new System.EventHandler(this.BtnLimpar_Click);
             // 
             // DtpValidade
             // 
@@ -225,7 +226,7 @@
             this.Controls.Add(this.LblValidade);
             this.Controls.Add(this.LblNome);
             this.Controls.Add(this.pbExit);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddProduct";
@@ -241,7 +242,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblTitulo;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Label LblNome;
         private System.Windows.Forms.Label LblValidade;

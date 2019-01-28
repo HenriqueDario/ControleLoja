@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 384);
+            this.ClientSize = new System.Drawing.Size(670, 375);
             this.Controls.Add(this.PnGrey);
             this.Controls.Add(this.TxtPesquisa);
             this.Controls.Add(this.PbSearch);

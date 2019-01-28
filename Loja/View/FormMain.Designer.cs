@@ -189,7 +189,7 @@
             this.PbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbMenu.TabIndex = 9;
             this.PbMenu.TabStop = false;
-            this.PbMenu.Click += new System.EventHandler(this.PbMenu_Click_1);
+            this.PbMenu.Click += new System.EventHandler(this.PbMenu_Click);
             // 
             // PbJubileu
             // 
@@ -200,7 +200,6 @@
             this.PbJubileu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbJubileu.TabIndex = 10;
             this.PbJubileu.TabStop = false;
-            this.PbJubileu.Click += new System.EventHandler(this.PbJubileu_Click);
             this.PbJubileu.MouseEnter += new System.EventHandler(this.PbJubileu_MouseEnter);
             this.PbJubileu.MouseLeave += new System.EventHandler(this.PbJubileu_MouseLeave);
             // 
@@ -241,14 +240,14 @@
             // TimerMenu
             // 
             this.TimerMenu.Interval = 10;
-            this.TimerMenu.Tick += new System.EventHandler(this.TimerMenu_Tick_1);
+            this.TimerMenu.Tick += new System.EventHandler(this.TimerMenu_Tick);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(719, 433);
+            this.ClientSize = new System.Drawing.Size(720, 435);
             this.Controls.Add(this.LblFala);
             this.Controls.Add(this.PbFala);
             this.Controls.Add(this.LblTitulo);
@@ -261,7 +260,6 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             this.PnMenu.ResumeLayout(false);
             this.PnMenu.PerformLayout();

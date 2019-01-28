@@ -254,11 +254,11 @@
             this.PbValido.TabIndex = 100;
             this.PbValido.TabStop = false;
             // 
-            // FormEditFuncionario
+            // FormEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 293);
+            this.ClientSize = new System.Drawing.Size(580, 290);
             this.Controls.Add(this.PbValido);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.MtxtTelefone);
@@ -282,7 +282,7 @@
             this.Controls.Add(this.PbExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormEditFuncionario";
+            this.Name = "FormEditEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar funcionario";
             this.Load += new System.EventHandler(this.FormEditFuncionario_Load);

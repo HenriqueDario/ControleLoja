@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using Loja.Model;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using Loja.Controller;
 
 namespace Loja
 {
     public partial class FormAddFuncionario : Form
     {
-        Controller.ValidarCPF vc = new Controller.ValidarCPF();
+        ValidarCPF vc = new ValidarCPF();
 
         public FormAddFuncionario()
         {
@@ -44,10 +45,10 @@ namespace Loja
                         Telefone = MtxtTelefone.Text
                     };
                     //instanciação de um Funcionário Controller
-                    Controller.EmployeeController fc = new Controller.EmployeeController();
+                    EmployeeController EmployeeCont = new EmployeeController();
 
                     //Usa o método de cadastrar funcionário passando um funcionário
-                    fc.CadastrarFuncionario(funcionario);
+                    EmployeeCont.CadastrarFuncionario(funcionario);
 
                     //mensagem para o usuário
                     MessageBox.Show("Funcionou perfeitamente", "Êxito");
@@ -112,10 +113,9 @@ namespace Loja
             {
                 //checa se o CPF é valido
                 if (vc.ValidaCPF(MtxtCPF.Text))
-                    PbValido.Image = Properties.Resources.cpfValido; //adiciona uma imagem de Êxito
+                    PbValido.Image = Properties.Resources.cpfValido; //adiciona uma imagem de êxito
                 else
                     PbValido.Image = Properties.Resources.CpfError; // adiciona uma imagem de erro
-
             }
             catch
             {
@@ -132,13 +132,18 @@ namespace Loja
                 if (vc.ValidaCPF(MtxtCPF.Text))
                     PbValido.Image = Properties.Resources.cpfValido; // adiciona uma imagem de Êxito
                 else
-                    PbValido.Image = Properties.Resources.CpfError; //adiciona uma imagem de erro
-
+                    PbValido.Image = Properties.Resources.CpfError; //adiciona uma imagem de erros
             }
             catch
             {
 
             }
+        }
+
+        private void FormAddFuncionario_Load(object sender, EventArgs e)
+        {
+            //carrega a data de hoje ao campo da data de nascimento
+            DtpDataNascimento.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

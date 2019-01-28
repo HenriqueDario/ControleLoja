@@ -71,9 +71,9 @@
             this.LblTitulo.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LblTitulo.Location = new System.Drawing.Point(197, 9);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(218, 22);
+            this.LblTitulo.Size = new System.Drawing.Size(211, 22);
             this.LblTitulo.TabIndex = 1;
-            this.LblTitulo.Text = "Cadastrar funcionários";
+            this.LblTitulo.Text = "Cadastrar funcionário";
             // 
             // LblNome
             // 
@@ -208,7 +208,7 @@
             this.DtpDataNascimento.Name = "DtpDataNascimento";
             this.DtpDataNascimento.Size = new System.Drawing.Size(117, 20);
             this.DtpDataNascimento.TabIndex = 2;
-            this.DtpDataNascimento.Value = new System.DateTime(2018, 10, 15, 0, 0, 0, 0);
+            this.DtpDataNascimento.Value = new System.DateTime(2019, 1, 28, 0, 0, 0, 0);
             // 
             // BtnCadastrar
             // 
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 294);
+            this.ClientSize = new System.Drawing.Size(580, 300);
             this.Controls.Add(this.PbValido);
             this.Controls.Add(this.BtnLimpar);
             this.Controls.Add(this.MtxtTelefone);
@@ -283,6 +283,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormAddFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbValido)).EndInit();
             this.ResumeLayout(false);

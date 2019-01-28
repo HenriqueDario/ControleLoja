@@ -11,7 +11,7 @@ namespace Loja.Model
         public int IdProduto { get; set; }
         public string Nome { get; set; }
         public int Quantidade { get; set; }
-        public decimal Preco { get; set; }
+        public Double Preco { get; set; }
         public string Lote { get; set; }
         public DateTime Fabricacao { get; set; }
         public DateTime Validade { get; set; }
@@ -22,7 +22,7 @@ namespace Loja.Model
 
         }
 
-        public Product(string nome, int quantidade, decimal preco, DateTime fabricacao, DateTime validade, string lote)
+        public Product(string nome, int quantidade, Double preco, DateTime fabricacao, DateTime validade, string lote)
         {
             Nome = nome;
             Quantidade = quantidade;

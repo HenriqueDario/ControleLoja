@@ -91,7 +91,7 @@ namespace Loja.Controller
                         IdProduto = Convert.ToInt16(dr["IdProduto"]),
                         Nome = dr["Nome"].ToString(),
                         Quantidade = Convert.ToInt16(dr["Quantidade"]),
-                        Preco = Convert.ToDecimal(dr["Preco"]),
+                        Preco = Convert.ToDouble(dr["Preco"]),
                         Lote = dr["Lote"].ToString(),
                         Fabricacao = Convert.ToDateTime(dr["Fabricacao"]),
                         Validade = Convert.ToDateTime(dr["Validade"])
@@ -133,6 +133,8 @@ namespace Loja.Controller
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 //Adicionando os parametros para o comando
+
+                cmd.Parameters.AddWithValue("@IdProduto", prod.IdProduto);
                 cmd.Parameters.AddWithValue("@Nome", prod.Nome);
                 cmd.Parameters.AddWithValue("@Quantidade", prod.Quantidade);
                 cmd.Parameters.AddWithValue("@Preco", prod.Preco);
@@ -208,13 +210,13 @@ namespace Loja.Controller
                 conexao = ConectarBanco.GetConexao();
 
                 //criação da string com o comando SQL
-                string sql = "SELECT * FROM tbProduto where Nome like @Nome";
+                string sql = "SELECT * FROM tbProduto where Nome like @nome";
 
                 //criação do comando
                 SqlCommand cmd = new SqlCommand(sql, conexao);
 
                 //adição do parametro do nome (com % para buscar o nome todo)
-                cmd.Parameters.AddWithValue("@Nome", nomeProduto + "%");
+                cmd.Parameters.AddWithValue("@nome", nomeProduto + "%");
 
                 //guardar todo o select do comando sql
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -273,7 +275,7 @@ namespace Loja.Controller
                         IdProduto = Convert.ToInt16(dr["IdProduto"]),
                         Nome = dr["Nome"].ToString(),
                         Quantidade = Convert.ToInt16(dr["Quantidade"]),
-                        Preco = Convert.ToDecimal(dr["Preco"]),
+                        Preco = Convert.ToDouble(dr["Preco"]),
                         Lote = dr["Lote"].ToString(),
                         Fabricacao = Convert.ToDateTime(dr["Fabricacao"]),
                         Validade = Convert.ToDateTime(dr["Validade"])
@@ -299,8 +301,6 @@ namespace Loja.Controller
             }
 
         }
-
-
 
     }
 

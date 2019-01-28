@@ -68,9 +68,12 @@
             // 
             // DgvProdutos
             // 
+            this.DgvProdutos.AllowUserToAddRows = false;
+            this.DgvProdutos.AllowUserToDeleteRows = false;
             this.DgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProdutos.Location = new System.Drawing.Point(12, 210);
             this.DgvProdutos.Name = "DgvProdutos";
+            this.DgvProdutos.ReadOnly = true;
             this.DgvProdutos.Size = new System.Drawing.Size(576, 132);
             this.DgvProdutos.TabIndex = 2;
             // 
@@ -85,6 +88,7 @@
             this.BtnEditar.TabIndex = 10;
             this.BtnEditar.Text = "Editar Produto";
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnExcluir
             // 
