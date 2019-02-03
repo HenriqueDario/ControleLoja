@@ -231,7 +231,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEditProduct";
-            this.Text = "FormEditProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Editar Produto";
             this.Load += new System.EventHandler(this.FormEditProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();

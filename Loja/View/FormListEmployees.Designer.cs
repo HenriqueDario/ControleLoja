@@ -176,7 +176,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormListEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Funcionarios";
+            this.Text = "Funcionários";
             this.Load += new System.EventHandler(this.FormListEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvFuncionarios)).EndInit();

@@ -194,5 +194,47 @@ namespace Loja.View
             //mostra mensagem ao usuário
             MessageBox.Show("Comando de ajuda", "Em desenvolvimento");
         }
+
+        private void PbVenda_Click(object sender, EventArgs e)
+        {
+            //instancia novo form de venda
+            FormSale FormVenda = new FormSale();
+
+            //esconde essa janela
+            this.Hide();
+
+            //inicia o timer menu
+            TimerMenu.Start();
+
+            //troca o valor da menuFlag
+            menuFlag = !menuFlag;
+
+            //mostra a janela do FormSale
+            FormVenda.ShowDialog();
+
+            //mostra essa janela
+            this.Show();
+        }
+
+        private void LblVenda_Click(object sender, EventArgs e)
+        {
+            //instancia novo form de venda
+            FormSale FormVenda = new FormSale();
+
+            //esconde essa janela
+            this.Hide();
+
+            //inicia o timer menu
+            TimerMenu.Start();
+
+            //troca o valor da menuFlag
+            menuFlag = !menuFlag;
+
+            //mostra a janela do FormSale
+            FormVenda.ShowDialog();
+
+            //mostra essa janela
+            this.Show();
+        }
     }
 }

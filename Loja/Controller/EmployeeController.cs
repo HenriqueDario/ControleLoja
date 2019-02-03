@@ -64,7 +64,6 @@ namespace Loja.Controller
 
         }
 
-
         //Método para listar os funcionarios, trazendo todos os funcionarios do banco de dados em um lista de funcionarios
         public List<Employee> ListarFuncionarios()
         {
@@ -209,7 +208,6 @@ namespace Loja.Controller
 
         }
 
-
         //Método para buscar um funcionário a partir do nome
         public DataTable BuscaFuncionario(String nome)
         {
@@ -315,8 +313,6 @@ namespace Loja.Controller
 
         }
     }
-
-
 }
 
 

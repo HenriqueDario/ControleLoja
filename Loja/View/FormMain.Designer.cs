@@ -84,7 +84,7 @@
             this.PnMenu.Controls.Add(this.PbFuncionario);
             this.PnMenu.Location = new System.Drawing.Point(-140, 0);
             this.PnMenu.Name = "PnMenu";
-            this.PnMenu.Size = new System.Drawing.Size(137, 432);
+            this.PnMenu.Size = new System.Drawing.Size(140, 435);
             this.PnMenu.TabIndex = 1;
             // 
             // LblRelatorio
@@ -114,6 +114,7 @@
             this.LblVenda.Size = new System.Drawing.Size(38, 13);
             this.LblVenda.TabIndex = 6;
             this.LblVenda.Text = "Venda";
+            this.LblVenda.Click += new System.EventHandler(this.LblVenda_Click);
             // 
             // LblFuncionario
             // 
@@ -167,6 +168,7 @@
             this.PbVenda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbVenda.TabIndex = 1;
             this.PbVenda.TabStop = false;
+            this.PbVenda.Click += new System.EventHandler(this.PbVenda_Click);
             // 
             // PbFuncionario
             // 

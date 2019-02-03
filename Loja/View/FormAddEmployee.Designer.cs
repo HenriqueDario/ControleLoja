@@ -283,6 +283,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Adicionar Funcionário";
             this.Load += new System.EventHandler(this.FormAddFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbValido)).EndInit();
