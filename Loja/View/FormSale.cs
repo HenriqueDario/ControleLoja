@@ -21,14 +21,18 @@ namespace Loja.View
 
         private void PbExit_Click(object sender, EventArgs e)
         {
+            TimerHora.Stop();
             this.Close();
         }
 
         private void FormSale_Load(object sender, EventArgs e)
         {
-            LblData.Text += Convert.ToString(DateTime.Now);
+            TimerHora.Start();
         }
 
-
+        private void TimerHora_Tick(object sender, EventArgs e)
+        {
+            LblData.Text = "Data: "+Convert.ToString(DateTime.Now);
+        }
     }
 }

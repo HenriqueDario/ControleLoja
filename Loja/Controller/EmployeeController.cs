@@ -15,7 +15,6 @@ namespace Loja.Controller
 {
     public class EmployeeController
     {
-
         //Método de cadastro do funcionario, passando um funcionário como parametro
         public void CadastrarFuncionario(Employee funcionario)
         {
